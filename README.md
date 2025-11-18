@@ -1,2 +1,2 @@
 # Cryptocurrency Explained
-Fun lil bitcoin explainer for a class at hopkins.
+Fun lil cryptocurrency explainer for a class at hopkins.

@@ -308,7 +308,7 @@ Because of that, the only way to find a nonce that gives you a hash with 30 lead
 Block #47:
 [Transactions...]
 Nonce: 8473829104
-Hash: 000000000000000000000000000000abcd1234...
+Hash: 00000000000abcd1234...
 
 You also chain blocks together - each block includes the hash of the previous block. Changing any old transaction would require redoing ALL the work for every block after it, since any change in the input block changes the output hash, and it no longer starts with 30 zeros.
 

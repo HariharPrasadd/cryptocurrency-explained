@@ -26,19 +26,19 @@ export const GameNode = ({
           variant="ghost"
           onClick={onGoBack}
           disabled={!canGoBack}
-          className="gap-2"
+          className="gap-2 hover:bg-white/10"
         >
           <ArrowLeft className="w-4 h-4" />
           Back
         </Button>
-        <Button variant="ghost" onClick={onRestart} className="gap-2">
+        <Button variant="ghost" onClick={onRestart} className="gap-2 hover:bg-white/10">
           <RotateCcw className="w-4 h-4" />
           Restart
         </Button>
       </div>
 
       {/* Main content card */}
-      <Card>
+      <Card className="bg-background border-white/20">
         {node.title && (
           <CardHeader>
             <CardTitle className="text-2xl">{node.title}</CardTitle>
@@ -59,7 +59,8 @@ export const GameNode = ({
             <Button
               onClick={onGoBack}
               size="lg"
-              className="w-full bg-red-500 hover:bg-red-500"
+              variant="outline"
+              className="w-full border-red-500/50 text-red-400 hover:text-red-400 hover:bg-red-500/10 hover:border-red-500"
             >
               Go Back
             </Button>
@@ -73,7 +74,7 @@ export const GameNode = ({
                   key={choice.id}
                   onClick={() => onChoice(choice.targetNodeId)}
                   variant="outline"
-                  className="w-full text-left h-auto py-4 px-6 justify-start whitespace-pre-wrap"
+                  className="w-full text-left h-auto py-4 px-6 justify-start whitespace-pre-wrap border-white/20 hover:bg-white/10 hover:border-white/40"
                 >
                   <span className="font-bold mr-3">
                     {String.fromCharCode(65 + index)}
@@ -86,7 +87,12 @@ export const GameNode = ({
 
           {/* Ending state */}
           {node.isEnding && (
-            <Button onClick={onRestart} size="lg" className="w-full">
+            <Button 
+              onClick={onRestart} 
+              size="lg" 
+              variant="outline"
+              className="w-full border-white/20 hover:bg-white/10 hover:border-white/40"
+            >
               Play Again
             </Button>
           )}

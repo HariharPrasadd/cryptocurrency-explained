@@ -48,7 +48,7 @@ export const GameNode = ({
           {/* Node text */}
           <div className="space-y-4">
             {node.text.split('\n\n').map((paragraph, i) => (
-              <p key={i} className="whitespace-pre-wrap break-normal overflow-wrap-anywhere leading-relaxed">
+              <p key={i} className="whitespace-pre-wrap break-normal hyphens-none leading-relaxed">
                 {paragraph}
               </p>
             ))}
@@ -74,7 +74,7 @@ export const GameNode = ({
                   key={choice.id}
                   onClick={() => onChoice(choice.targetNodeId)}
                   variant="outline"
-                  className="w-full text-left h-auto py-4 px-6 justify-start whitespace-pre-wrap break-normal overflow-wrap-anywhere border-white/20 hover:bg-white/10 hover:border-white/40"
+                  className="w-full text-left h-auto py-4 px-6 justify-start whitespace-pre-wrap break-normal hyphens-none border-white/20 hover:bg-white/10 hover:border-white/40"
                 >
                   <span className="font-bold mr-3">
                     {String.fromCharCode(65 + index)}

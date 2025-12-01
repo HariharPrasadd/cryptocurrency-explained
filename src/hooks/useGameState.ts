@@ -33,7 +33,8 @@ export const useGameState = () => {
     setHistory(['node-0']);
   }, []);
 
-  const canGoBack = history.length > 1;
+  // Can go back if we're not at the first node
+  const canGoBack = history.length > 1 || currentNodeId !== 'node-0';
 
   return {
     currentNode,
